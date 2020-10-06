@@ -1,4 +1,0 @@
-# Jakku
-
-**TODO: Add description**
-

@@ -1,0 +1,26 @@
+#+TITLE: Project Jakku
+Easy online viewing and editing of Emacs org-mode TODOs, by Jakob Klemm.
+* Introduction
+
+* Setup
+** Architecture
+Owncloud + Emacs
+** Variables
+- =letter=, string.
+  Letter used in =org-agenda= selection menu for the agenda, default is =a=. Special
+  letters allow special filters to be applied within Emacs.
+- =init=, string.
+  Path to init file for Emacs config.
+* Extraction
+Get all TODO's with the following command, formatted as CSV.
+#+begin_src sh
+emacs -batch -l ~/.emacs.d/init.el -eval '(org-batch-agenda-csv "a" org-agenda-span (quote month))'
+#+end_src
+The following fields exist:
+#+begin_src csv
+category,head,type,todo,tags,date,time,extra,priority-l,priority-n
+#+end_src
+([[https://orgmode.org/manual/Extracting-Agenda-Information.html][Extracting Agenda Information]])
+* Display
+
+* Insert
