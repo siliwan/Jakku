@@ -1,7 +1,7 @@
 #+TITLE: Project Jakku
 Easy online viewing and editing of Emacs org-mode TODOs, by Jakob Klemm.
 * Introduction
-
+For stuff like this.
 * Setup
 ** Architecture
 Owncloud + Emacs
@@ -10,7 +10,7 @@ Owncloud + Emacs
   Letter used in =org-agenda= selection menu for the agenda, default is =a=. Special
   letters allow special filters to be applied within Emacs.
 - =init=, string.
-  Path to init file for Emacs config.
+  Path to init file for Emacs config, default is =~/.emacs.d/init.el=
 * Extraction
 Get all TODO's with the following command, formatted as CSV.
 #+begin_src sh

@@ -9,6 +9,14 @@
 # move said applications out of the umbrella.
 import Config
 
+# Emacs settings
+# filter = possible extra filters and emacs commands.
+config :interface,
+  path: "~/.emacs.d/init.el",
+  time: "month",
+  letter: "a",
+  filter: ""
+
 # Sample configuration:
 #
 #     config :logger, :console,
@@ -16,3 +24,23 @@ import Config
 #       format: "$date $time [$level] $metadata$message\n",
 #       metadata: [:user_id]
 #
+
+# Configures the endpoint
+config :handler, HandlerWeb.Endpoint,
+  url: [host: "localhost"],
+  secret_key_base: "ALcYThi+HR6fPglxl1SEPjoaXYffApO1dgDnli6UwTzj/89oTUFwEscB/+ET0fSg",
+  render_errors: [view: HandlerWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Handler.PubSub,
+  live_view: [signing_salt: "UFACOKy9"]
+
+# Configures Elixir's Logger
+config :logger, :console,
+  format: "$time $metadata[$level] $message\n",
+  metadata: [:request_id]
+
+# Use Jason for JSON parsing in Phoenix
+config :phoenix, :json_library, Jason
+
+# Import environment specific config. This must remain at the bottom
+# of this file so it overrides the configuration defined above.
+import_config "#{Mix.env()}.exs"

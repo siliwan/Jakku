@@ -1,0 +1,19 @@
+<table style="width:100%; display:inline-block;">
+  <tr>
+    <th>Type</th>
+    <th>Name (Category)</th>
+    <th>Scheduled</th>
+    <th>Deadline</th>
+    <th>Tags</th>
+  </tr>
+  <tr> </tr>
+  <%= for event <- @events do %>
+      <tr>
+        <td style="color:red;"><%= event.todo %></td>
+        <td><%= event.name %> (<%= event.category  %>) </td>
+        <td> <%= event.scheduled %> </td>
+        <td> <%= event.deadline %> </td>
+        <td> <%= event.tags %> </td>
+      </tr>
+      <% end %>
+</table>
