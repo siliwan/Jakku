@@ -2,7 +2,7 @@ defmodule HandlerWeb.PageController do
   use HandlerWeb, :controller
 
   def index(conn, _params) do
-    events = Event.all() |> Event.compress()
+    events = Event.all() |> Event.compress() |> Enum.sort(&(&1.category > &2.category))
     render(conn, "index.html", events: events)
   end
 
