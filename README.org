@@ -21,6 +21,8 @@ The following fields exist:
 category,head,type,todo,tags,date,time,extra,priority-l,priority-n
 #+end_src
 ([[https://orgmode.org/manual/Extracting-Agenda-Information.html][Extracting Agenda Information]])
+The shell script fetches that information and writes it to =current.csv=. From
+there the data is parsed. =extract.sh= can simple be run by a CRON-Job.
 * Display
 
 * Insert

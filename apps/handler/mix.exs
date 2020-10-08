@@ -46,7 +46,8 @@ defmodule Handler.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.0"},
-      {:event, in_umbrella: true}
+      {:event, in_umbrella: true},
+      {:interface, in_umbrella: true}
     ]
   end
 

@@ -13,4 +13,8 @@ defmodule Interface.Reader do
     #System.cmd("emacs", ["-batch", "-l", path, "-eval", eval, ">>", "current.csv"])
     System.cmd("emacs", ["-batch", "-l", path, "-eval", eval])
   end
+
+  def fetch() do
+    System.cmd("./extract.sh", [])
+  end
 end

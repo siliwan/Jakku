@@ -17,8 +17,7 @@
   <body>
     <header>
       <div style="width=100%;">
-        <h1>Project Jakku</h1>
-        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <h1><a href="/">Project Jakku</a></h1>
       </div>
     </header>
     <main role="main" class="container">

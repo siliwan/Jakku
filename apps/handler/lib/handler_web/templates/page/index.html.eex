@@ -1,3 +1,21 @@
+<div id = "container" style = "width:100%">
+    <div id ="left" style = "float:left; width: 50%; padding:3%;">
+      <h3>Add TODO</h3>
+      <form method="post" action="/todo">
+        <input type="text" placeholder="Name" name="name">
+        <input type="date" name="deadline">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div id = "middle" style = "float:right; width: 50%; padding:3%;">
+      <h3>Add NOTE</h3>
+      <form method="post" action="/note">
+        <input type="text" placeholder="Name" name="name">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+</div>
+
 <table style="width:100%; display:inline-block;">
   <tr>
     <th>Type</th>
